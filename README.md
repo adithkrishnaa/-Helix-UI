@@ -2,7 +2,7 @@
 
 ![Helix UI Banner](public/banner.png)
 
-Helix UI is a premium, production-ready documentation platform for a fictional UI library. Built with Next.js 15, MDX, and Tailwind CSS.
+Helix UI is a premium, production-ready documentation platform for a fictional UI library. Built with Next.js 16, MDX, and Tailwind CSS.
 
 
 ## 🚀 Quick Start
