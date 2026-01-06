@@ -1,0 +1,66 @@
+# Input
+
+Inputs allow users to enter and edit text. They include support for labels and error states.
+
+## Usage
+
+<DemoBlock>
+  <div className="w-full max-w-sm space-y-4">
+    <Input label="Email" placeholder="Enter your email" type="email" />
+    <Input label="Password" defaultValue="secret" type="password" error="Invalid password provided" />
+  </div>
+</DemoBlock>
+
+<CodeBlock 
+  language="tsx" 
+  code={`import { Input } from '@/components/ui/input';
+
+export default function Example() {
+  return (
+    <div className="space-y-4">
+      <Input label="Email" placeholder="Enter your email" type="email" />
+      <Input label="Password" type="password" error="Invalid password" />
+    </div>
+  );
+}`} 
+/>
+
+## States
+
+### Default
+
+<DemoBlock>
+  <Input placeholder="Search..." className="max-w-xs" />
+</DemoBlock>
+
+### With Label
+
+<DemoBlock>
+  <Input label="Username" placeholder="@adith" className="max-w-xs" />
+</DemoBlock>
+
+### Error State
+
+<DemoBlock>
+  <Input label="Email" defaultValue="invalid-email" error="Please enter a valid email address" className="max-w-xs" />
+</DemoBlock>
+
+
+### Disabled State
+
+<DemoBlock>
+  <Input label="Disabled Input" placeholder="Cannot type here" disabled className="max-w-xs" />
+</DemoBlock>
+
+
+## API Reference
+
+<PropsTable 
+  props={[
+    { name: 'label', type: 'string', description: 'The label for the input.' },
+    { name: 'error', type: 'string', description: 'An error message to display.' },
+    { name: 'type', type: 'string', defaultValue: "'text'", description: 'The type of the input.' },
+    { name: 'placeholder', type: 'string', description: 'The placeholder text.' },
+    { name: 'disabled', type: 'boolean', defaultValue: 'false', description: 'Whether the input is disabled.' },
+  ]} 
+/>

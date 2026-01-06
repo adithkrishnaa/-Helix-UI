@@ -1,0 +1,78 @@
+# Button
+
+Buttons are used to trigger actions and transitions. Helix UI provides a variety of button styles and sizes to fit any design.
+
+## Usage
+
+<DemoBlock>
+  <Button variant="primary">Primary Button</Button>
+  <Button variant="secondary">Secondary Button</Button>
+  <Button variant="ghost">Ghost Button</Button>
+</DemoBlock>
+
+<CodeBlock 
+  language="tsx" 
+  code={`import { Button } from '@/components/ui/button';
+
+export default function Example() {
+  return (
+    <div className="flex gap-4">
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="ghost">Ghost</Button>
+    </div>
+  );
+}`} 
+/>
+
+## Variants
+
+Helix UI buttons come in three main variants: `primary`, `secondary`, and `ghost`.
+
+<DemoBlock>
+  <div className="flex flex-col gap-4">
+    <div className="flex gap-4 items-center">
+      <span className="w-24 text-sm font-medium text-gray-400">Primary</span>
+      <Button variant="primary">Action</Button>
+    </div>
+    <div className="flex gap-4 items-center">
+      <span className="w-24 text-sm font-medium text-gray-400">Secondary</span>
+      <Button variant="secondary">Cancel</Button>
+    </div>
+    <div className="flex gap-4 items-center">
+      <span className="w-24 text-sm font-medium text-gray-400">Ghost</span>
+      <Button variant="ghost">Dismiss</Button>
+    </div>
+  </div>
+</DemoBlock>
+
+## Sizes
+
+Buttons are available in `sm`, `md`, and `lg` sizes.
+
+<DemoBlock>
+  <Button size="sm">Small</Button>
+  <Button size="md">Medium</Button>
+  <Button size="lg">Large</Button>
+</DemoBlock>
+
+## Disabled State
+
+Disable buttons to prevent user interaction.
+
+<DemoBlock>
+  <Button disabled>Disabled Button</Button>
+  <Button variant="secondary" disabled>Disabled Secondary</Button>
+</DemoBlock>
+
+
+## API Reference
+
+<PropsTable 
+  props={[
+    { name: 'variant', type: "'primary' | 'secondary' | 'ghost'", defaultValue: "'primary'", description: 'The visual style of the button.' },
+    { name: 'size', type: "'sm' | 'md' | 'lg'", defaultValue: "'md'", description: 'The size of the button.' },
+    { name: 'disabled', type: 'boolean', defaultValue: 'false', description: 'Whether the button is disabled' },
+    { name: 'className', type: 'string', description: 'Additional CSS classes for the button.' },
+  ]} 
+/>

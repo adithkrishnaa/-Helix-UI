@@ -1,0 +1,56 @@
+# Card
+
+Cards are used to group related content and actions in a single container.
+
+## Usage
+
+<DemoBlock>
+  <Card className="w-[350px]">
+    <CardHeader>
+      <CardTitle>Create project</CardTitle>
+      <CardDescription>Deploy your new project in one-click.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className="text-sm text-gray-500">Your project will be deployed to the cloud instantly.</p>
+    </CardContent>
+    <CardFooter className="flex justify-between">
+      <Button variant="secondary">Cancel</Button>
+      <Button variant="primary">Deploy</Button>
+    </CardFooter>
+  </Card>
+</DemoBlock>
+
+<CodeBlock 
+  language="tsx" 
+  code={`import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+
+export default function Example() {
+  return (
+    <Card className="w-[350px]">
+      <CardHeader>
+        <CardTitle>Create project</CardTitle>
+        <CardDescription>Deploy your new project in one-click.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p>Your project will be deployed to the cloud instantly.</p>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+        <Button variant="secondary">Cancel</Button>
+        <Button>Deploy</Button>
+      </CardFooter>
+    </Card>
+  );
+}`} 
+/>
+
+## API Reference
+
+### Card
+
+<PropsTable 
+  props={[
+    { name: 'className', type: 'string', description: 'Additional CSS classes for the card.' },
+    { name: 'children', type: 'React.ReactNode', required: true, description: 'The content of the card.' },
+  ]} 
+/>

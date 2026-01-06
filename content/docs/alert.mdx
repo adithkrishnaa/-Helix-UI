@@ -1,0 +1,63 @@
+# Alert
+
+Alerts provide contextual feedback for typical user actions or system states.
+
+## Usage
+
+<DemoBlock>
+  <div className="w-full max-w-lg space-y-4">
+    <Alert variant="info">
+      A new update is available. Please refresh the page.
+    </Alert>
+    <Alert variant="success">
+      Your project has been successfully deployed!
+    </Alert>
+    <Alert variant="error">
+      There was an error while saving your changes.
+    </Alert>
+  </div>
+</DemoBlock>
+
+<CodeBlock 
+  language="tsx" 
+  code={`import { Alert } from '@/components/ui/alert';
+
+export default function Example() {
+  return (
+    <div className="space-y-4">
+      <Alert variant="success">Success message</Alert>
+      <Alert variant="error">Error message</Alert>
+    </div>
+  );
+}`} 
+/>
+
+## Variants
+
+### Info (Default)
+
+<DemoBlock>
+  <Alert variant="info">Did you know you can customize this theme?</Alert>
+</DemoBlock>
+
+### Success
+
+<DemoBlock>
+  <Alert variant="success">Account created successfully.</Alert>
+</DemoBlock>
+
+### Error
+
+<DemoBlock>
+  <Alert variant="error">Session expired. Please log in again.</Alert>
+</DemoBlock>
+
+## API Reference
+
+<PropsTable 
+  props={[
+    { name: 'variant', type: "'success' | 'error' | 'info'", defaultValue: "'info'", description: 'The style of the alert.' },
+    { name: 'onClose', type: '() => void', description: 'Callback function when the close button is clicked.' },
+    { name: 'children', type: 'React.ReactNode', required: true, description: 'The content of the alert.' },
+  ]} 
+/>
